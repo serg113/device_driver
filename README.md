@@ -4,9 +4,16 @@ $ make
 2. add module to the kernel \
 $ make load \
 or \
-$ sudo insmod copy-char-dev-module.ko \
+$ sudo insmod copy-char-dev-module.ko 
 
-The character device driver registers itself at /dev/copy \
+3. remove module \
+$ make unload \
+or \
+$ sudo rmmod copy-char-dev-module.ko 
+
+
+*The character device driver registers itself at /dev/copy 
+
 
 <b> -- delete module -- </b> \
 sudo rmmod copy-char-dev-module.ko
@@ -16,7 +23,7 @@ cat /dev/kmsg
 
 
 
-<b> references: </b>\
+<b> references: </b>
 
 1. https://linux-kernel-labs.github.io/refs/heads/master/labs/device_drivers.html
 
@@ -26,7 +33,7 @@ cat /dev/kmsg
 
 4. https://www.linuxquestions.org/questions/programming-9/character-device-mounting-799077/
 
-5 https://web.archive.org/web/20131208033328/http://www.fiveanddime.net:80/man-pages/kmalloc.9.html
+5. https://web.archive.org/web/20131208033328/http://www.fiveanddime.net:80/man-pages/kmalloc.9.html
 
 6. https://www.linuxquestions.org/questions/programming-9/character-device-mounting-799077/
 
